@@ -7,7 +7,7 @@ version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'snowflake_test'
+profile: 'snowflake'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -35,11 +35,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   snowflake_test:
       materialized: table
-      staging:
-        database: DBT_DEMO_STAGING
-        schema: AIRBYTE
-        materialized: table
-      marts:
-        database: DBT_DEMO_MARTS
-        schema: CORE
-        materialized: view
+      # staging:
+      #   database: DBT_DEMO_STAGING
+      #   schema: AIRBYTE
+      #   materialized: table
+      # marts:
+      #   database: DBT_DEMO_MARTS
+      #   schema: CORE
+      #   materialized: view
